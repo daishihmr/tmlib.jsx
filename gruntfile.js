@@ -9,7 +9,7 @@ module.exports = function(grunt) {
     watch: {
       test: {
         files: ['src/**/*.jsx', 'test/**/*.jsx'],
-        tasks: ['jsx:test'],
+        tasks: ['jsx:test', 'jsx:testGraphics'],
       },
       shooting: {
         files: ['src/**/*.jsx', 'examples/shooting/src/*.jsx'],
@@ -28,6 +28,11 @@ module.exports = function(grunt) {
       test: {
         src: 'test/geom/vector2.jsx',
         args: '--test'
+      },
+      testGraphics: {
+        src: 'test/graphics/gradient.jsx',
+        dest: 'examples/graphics/gradient.js',
+        executable: "web",
       },
       shooting: {
         src: 'examples/shooting/src/main.jsx',
